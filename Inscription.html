@@ -5,11 +5,27 @@
 <script language="javascript" type="text/javascript">
 function verif_form()
 {
-	if(document.form.nom.value == "") 
+	if(document.form.nom.value == "")
 	{
 	alert("veuillez saisie votre nom!");
 	}
+	if(document.form.prénom.value == "")
+	{
+	alert("veuillez saisie votre prénom!");
+	}
+	}
+	function VerifMail()
+{
+	if(document.getElementById(email) == "")
+	{
+	alert("Veuillez saisir une adresse email valide.");
+	}
+	else
+	{
 }
+function verif_num() {
+    var x, text;
+		x = document.getElementById("numb").value;
 </script>
 </head>
 <body>
@@ -27,19 +43,19 @@ function verif_form()
 
 <tr>
 		<td>  E-mail: </td>
-		<td colspan="2"> <input type="text" size="" required placeholder="adresse@exemple.com"> </td>
+		<td colspan="2"> <input type="text" size="" required placeholder="adresse@exemple.com" id="email"> </td>
 </tr>
 
 <tr>
 		<td>  Téléphone:  </td>
-	<td> 
-		<input type="text" > 
+	<td>
+		<input type="text" id="numb" >
 	</td>
 </tr>
 <tr>
 <td rowspan="4"> Adresse: </td>
-	<td> 	
-		<input type="text"  required placeholder="Adresse 1">  
+	<td>
+		<input type="text"  required placeholder="Adresse 1">
 	</td>
 </tr>
 <tr>
@@ -53,13 +69,13 @@ function verif_form()
 <tr>
 	<td>
 		<input type="text"   required placeholder="code postal"> </td>
-	<td> 		
-		<select name="pays"> 
+	<td>
+		<select name="pays">
 				<option value="Pays" selected="selected"> Pays </option>
 
 				<option value="Afghanistan">Afghanistan </option>
 				<option value="Afrique_Centrale">Afrique_Centrale </option>
-				<option value="Afrique_du_sud">Afrique_du_Sud </option> 
+				<option value="Afrique_du_sud">Afrique_du_Sud </option>
 				<option value="Albanie">Albanie </option>
 				<option value="Algerie">Algerie </option>
 				<option value="Allemagne">Allemagne </option>
@@ -68,7 +84,7 @@ function verif_form()
 				<option value="Anguilla">Anguilla </option>
 				<option value="Arabie_Saoudite">Arabie_Saoudite </option>
 				<option value="Argentine">Argentine </option>
-				<option value="Armenie">Armenie </option> 
+				<option value="Armenie">Armenie </option>
 				<option value="Australie">Australie </option>
 				<option value="Autriche">Autriche </option>
 				<option value="Azerbaidjan">Azerbaidjan </option>
@@ -99,8 +115,8 @@ function verif_form()
 				<option value="Canaries">Canaries </option>
 				<option value="Cap_vert">Cap_Vert </option>
 				<option value="Chili">Chili </option>
-				<option value="Chine">Chine </option> 
-				<option value="Chypre">Chypre </option> 
+				<option value="Chine">Chine </option>
+				<option value="Chypre">Chypre </option>
 				<option value="Colombie">Colombie </option>
 				<option value="Comores">Colombie </option>
 				<option value="Congo">Congo </option>
@@ -117,7 +133,7 @@ function verif_form()
 				<option value="Djibouti">Djibouti </option>
 				<option value="Dominique">Dominique </option>
 
-				<option value="Egypte">Egypte </option> 
+				<option value="Egypte">Egypte </option>
 				<option value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </option>
 				<option value="Equateur">Equateur </option>
 				<option value="Erythree">Erythree </option>
@@ -151,7 +167,7 @@ function verif_form()
 				<option value="Guyane_Francaise ">Guyane_Francaise </option>
 
 				<option value="Haiti">Haiti </option>
-				<option value="Hawaii">Hawaii </option> 
+				<option value="Hawaii">Hawaii </option>
 				<option value="Honduras">Honduras </option>
 				<option value="Hong_Kong">Hong_Kong </option>
 				<option value="Hongrie">Hongrie </option>
@@ -183,7 +199,7 @@ function verif_form()
 				<option value="Liban">Liban </option>
 				<option value="Liberia">Liberia </option>
 				<option value="Liechtenstein">Liechtenstein </option>
-				<option value="Lituanie">Lituanie </option> 
+				<option value="Lituanie">Lituanie </option>
 				<option value="Luxembourg">Luxembourg </option>
 				<option value="Lybie">Lybie </option>
 
@@ -237,7 +253,7 @@ function verif_form()
 				<option value="Paraguay">Paraguay </option>
 				<option value="Pays_Bas">Pays_Bas </option>
 				<option value="Perou">Perou </option>
-				<option value="Philippines">Philippines </option> 
+				<option value="Philippines">Philippines </option>
 				<option value="Pologne">Pologne </option>
 				<option value="Polynesie">Polynesie </option>
 				<option value="Porto_Rico">Porto_Rico </option>
@@ -260,16 +276,16 @@ function verif_form()
 				<option value="Salvador">Salvador </option>
 				<option value="Samoa_Occidentales">Samoa_Occidentales</option>
 				<option value="Samoa_Americaine">Samoa_Americaine </option>
-				<option value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </option> 
-				<option value="Senegal">Senegal </option> 
+				<option value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </option>
+				<option value="Senegal">Senegal </option>
 				<option value="Seychelles">Seychelles </option>
 				<option value="Sierra Leone">Sierra Leone </option>
 				<option value="Singapour">Singapour </option>
 				<option value="Slovaquie">Slovaquie </option>
 				<option value="Slovenie">Slovenie</option>
 				<option value="Somalie">Somalie </option>
-				<option value="Soudan">Soudan </option> 
-				<option value="Sri_Lanka">Sri_Lanka </option> 
+				<option value="Soudan">Soudan </option>
+				<option value="Sri_Lanka">Sri_Lanka </option>
 				<option value="Suede">Suede </option>
 				<option value="Suisse">Suisse </option>
 				<option value="Surinam">Surinam </option>
@@ -284,11 +300,11 @@ function verif_form()
 				<option value="Thailande">Thailande </option>
 				<option value="Tibet">Tibet </option>
 				<option value="Timor_Oriental">Timor_Oriental </option>
-				<option value="Togo">Togo </option> 
+				<option value="Togo">Togo </option>
 				<option value="Trinite_et_Tobago">Trinite_et_Tobago </option>
 				<option value="Tristan da cunha">Tristan de cuncha </option>
 				<option value="Tunisie">Tunisie </option>
-				<option value="Turkmenistan">Turmenistan </option> 
+				<option value="Turkmenistan">Turmenistan </option>
 				<option value="Turquie">Turquie </option>
 
 				<option value="Ukraine">Ukraine </option>
@@ -309,12 +325,12 @@ function verif_form()
 
 				<option value="Zambie">Zambie </option>
 				<option value="Zimbabwe">Zimbabwe </option>
-		</select> 
+		</select>
 </td>
 </tr>
 
 <tr>
-	<td> Date de naissance: </td> 
+	<td> Date de naissance: </td>
 		<td>
 			<select >
 			  <option value="Jour" selected="selected"> Jour </option>
@@ -327,8 +343,8 @@ function verif_form()
 			  <option value="19"> 19 </option> <option value="20"> 20 </option> <option value="21"> 21 </option>
 			  <option value="22"> 22 </option> <option value="23"> 23 </option> <option value="24"> 24</option>
 			  <option value="25"> 25 </option> <option value="26"> 26 </option> <option value="27"> 27 </option>
-			  <option value="28"> 28 </option> <option value="29"> 29 </option> <option value="30"> 30 </option> 
-			  <option value="31"> 31 </option> 
+			  <option value="28"> 28 </option> <option value="29"> 29 </option> <option value="30"> 30 </option>
+			  <option value="31"> 31 </option>
 			</select>
 		</td>
 		<td>
@@ -353,8 +369,8 @@ function verif_form()
 			<option value="year" selected="selected"> Année </option>
 			  <option value="1970"> 1970 </option> <option value="1971"> 1971 </option> <option value="1972"> 1972</option>
 			  <option value="1973"> 1973 </option> <option value="1974"> 1974 </option> <option value="1975"> 1975 </option>
-			  <option value="1976"> 1976</option> <option value="1977"> 1977 </option> <option value="1978"> 1978 </option> 
-			  <option value="1979"> 1979 </option> 
+			  <option value="1976"> 1976</option> <option value="1977"> 1977 </option> <option value="1978"> 1978 </option>
+			  <option value="1979"> 1979 </option>
 			  <option value="1980"> 1980 </option> <option value="1981"> 1981 </option> <option value="1982"> 1982 </option>
 			  <option value="1983"> 1983 </option> <option value="1984"> 1984 </option> <option value="1985"> 1985 </option>
 			  <option value="1986"> 1986 </option> <option value="1987"> 1987 </option> <option value="1988"> 1988 </option>
@@ -362,18 +378,18 @@ function verif_form()
 			  <option value="1992"> 1992 </option> <option value="1993"> 1993 </option> <option value="1994"> 1994 </option>
 			  <option value="1995"> 1995 </option> <option value="1996"> 1996 </option> <option value="1997"> 1997</option>
 			  <option value="1998"> 1998 </option> <option value="1999"> 1999 </option> <option value="2000"> 2000 </option>
-			  
+
 			 </select>
 		</td>
 </tr>
 <tr>
-	<td> Comment vous nous  <br> avez trouvé ? </td> 
-	<td> 
+	<td> Comment vous nous  <br> avez trouvé ? </td>
+	<td>
 		<input type="checkbox" value="Ami ou Collégue"> Ami ou Collégue  </input> <br>
 		<input type="checkbox" value="Google"> Google </input> <br>
 		<input type="checkbox" value="Blog">  Blog</input> <br>
 		<input type="checkbox" value="News">  News </input> <br>
-	</td> 
+	</td>
 </table>
 </form>
 <hr color="red" size="4"> </hr>

@@ -1,0 +1,19 @@
+.big{
+  width: 35%;
+  margin: 50px auto;
+  padding: 20px;
+  background:#EFFFE0;
+}
+form div{
+  margin: 3px auto;
+}
+#p {
+  font-family: cursive;
+  font-size: 12;
+}
+h1{
+  font-family: fantasy;
+}
+h3{
+  font-family: fantasy;
+}

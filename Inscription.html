@@ -3,47 +3,55 @@
 <head>
 <title> </title>
 <script language="javascript" type="text/javascript">
-function verif_form()
+  var username = document.form["vform"]["username"];
+
+
+	var name_error = document.getElementById("name_error");
+
+	username.addEventListener("blur" , nameVerify, true);
+
+
+function validate()
 {
-	if(document.form.nom.value == "")
-	{
-	alert("veuillez saisie votre nom!");
+	if (username.value == "")
+		{
+			username.style.border = "1px solid red";
+			name_error.textContent = "username is required";
+			username.focus();
+			return false;
+		}
+function nameVerify(){
+	if(username.value !=""){
+		username.style.border = "1px solid #5E6E66";
+		name_error.innerHTML = "";
+		return true;
 	}
-	if(document.form.prénom.value == "")
-	{
-	alert("veuillez saisie votre prénom!");
-	}
-	}
-	function VerifMail()
-{
-	if(document.getElementById(email) == "")
-	{
-	alert("Veuillez saisir une adresse email valide.");
-	}
-	else
-	{
 }
-function verif_num() {
-    var x, text;
-		x = document.getElementById("numb").value;
+}
 </script>
 </head>
 <body>
 	<h1 align="center"> Enregistrement des membres du club </h1>
 	<h3> Remplissez le formulaire ci-dissous pour vous inscrire à notre club. </h3>
 <hr color="red" size="4"> </hr>
-<form align="center" method="post" onSubmit="return verif_form()">
-
+<form align="center" method="post" onsubmit="return validate()" name="vform">
+	<div>
+		<input type="text"  size="15" name="username" required placeholder="Nom"> </input>
+		<div id="name_error" class="val_error"> </div>
+	</div>
+</form>
 	<table align="center" border="0">
 <tr>
 <td> Nom:  </td>
-		<td> <input type="text"  size="15" name="nom" required placeholder="Nom"> </input>   </td>
-		<td> <input type="text" size="15" name="prénom" required placeholder="Prénom"> </input>  </td>
+		<td> <input type="text"  size="15" name="username" required placeholder="Nom"> </input>
+					<div id="name_error" class="val_error"> </div>
+		</td>
+		<td> <input type="text" size="15" name="prénom" required placeholder="Prénom"> </input> </td>
 </tr>
 
 <tr>
 		<td>  E-mail: </td>
-		<td colspan="2"> <input type="text" size="" required placeholder="adresse@exemple.com" id="email"> </td>
+		<td colspan="2"> <input type="text" size="" required placeholder="adresse@exemple.com" id="email" required> </td>
 </tr>
 
 <tr>
@@ -401,7 +409,7 @@ function verif_num() {
 <td> <p> J'ai lu , compris et accepté les régles d'adhésion. </p> </td>
 </table >
 <br>
-<center> <input type="submit"  value="Envoyer"> </input></center>
+<center> <input type="submit"  value="Envoyer" class="btn" name="register"> </input></center>
 
 </body>
 </html>
